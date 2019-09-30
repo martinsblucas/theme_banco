@@ -1,0 +1,34 @@
+@import "colors";
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: $bodyBG;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Arbutus Slab', serif;
+}
+strong, b {
+  font-weight: 600;
+}
+a, a:link, a:active, a:visited, a:hover {
+  text-decoration: none;
+}
+a, a:link, a:active, a:visited {
+  color: #FFFFFF;
+  opacity: .95;
+  transition: all .2s;
+}
+a:hover {
+  color: #FFFFFF;
+  opacity: 1;
+}

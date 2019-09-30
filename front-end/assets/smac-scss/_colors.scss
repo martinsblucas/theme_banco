@@ -1,0 +1,7 @@
+$colorPrimary: #293462;
+$colorSecondary: #216583;
+$colorTertiary: #00818a;
+$color4: #f7be16;
+$bodyBG: #ebebeb;
+
+@debug adjust-color($colorPrimary, $alpha: -0.4);
