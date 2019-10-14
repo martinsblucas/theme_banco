@@ -1,0 +1,8 @@
+@import "../../colors";
+#footer {
+  color: $colorPrimary;
+  padding: 0;
+  & .container {
+    padding: 0 15px 60px;
+  }
+}

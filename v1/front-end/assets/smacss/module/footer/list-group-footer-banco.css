@@ -1,0 +1,66 @@
+@media (min-width: 576px) and (max-width: 650px) {
+  .container {
+    max-width: 650px;
+  }
+}
+@media (min-width: 651px) and (max-width: 720px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 721px) and (max-width: 767.98px) {
+  .container {
+    max-width: 767.98px;
+  }
+}
+.list-group-footer-banco {
+  padding: 10px 0;
+}
+.list-group-footer-banco .list-group-item {
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  padding: 10px 0;
+}
+.list-group-footer-banco .list-group-item a {
+  color: #216583;
+}
+.list-group-footer-banco .list-group-item a:hover {
+  text-decoration: underline;
+}
+.list-group-footer-banco .list-group-item .dropdown-menu-banco {
+  padding: 10px 0;
+}
+.list-group-footer-banco .list-group-item .dropdown-menu-banco .list-group-item {
+  font-size: 16px;
+  padding: 5px 0 0 10px;
+}
+.list-group-footer-banco .list-group-item .dropdown-menu-banco .list-group-item::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #f7be16;
+  display: inline-block;
+  margin: 0 10px 0 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.list-group-footer-banco.list-group-footer-primary-banco .list-group-item {
+  padding: 5px 0 0 10px;
+}
+.list-group-footer-banco.list-group-footer-primary-banco .list-group-item::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #f7be16;
+  display: inline-block;
+  margin: 0 10px 0 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/*# sourceMappingURL=list-group-footer-banco.css.map */

@@ -1,0 +1,4 @@
+.dropdown-menu-banco .list-group-item::before,
+.list-group-footer-primary-banco .list-group-item::before {
+    content: "\f3bf";
+}

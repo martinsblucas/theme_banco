@@ -1,0 +1,63 @@
+@media (min-width: 576px) and (max-width: 650px) {
+  .container {
+    max-width: 650px;
+  }
+}
+@media (min-width: 651px) and (max-width: 720px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 721px) and (max-width: 767.98px) {
+  .container {
+    max-width: 767.98px;
+  }
+}
+.card-group-banco .card-banco {
+  margin: 0 0 30px;
+  border-radius: 2px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.5) 0;
+  transition: all 0.2s;
+}
+.card-group-banco .card-banco .card-img {
+  border-radius: 2px 2px 0 0;
+}
+.card-group-banco .card-banco .card-footer {
+  border-radius: 0 0 2px 2px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px 15px;
+}
+@media (min-width: 576px) {
+  .card-group-banco .card-banco .card-footer {
+    min-height: 180px;
+  }
+}
+.card-group-banco .card-banco .card-footer .card-title {
+  margin-bottom: 8px;
+  text-transform: none;
+  font-size: 16px;
+  color: #404040;
+}
+.card-group-banco .card-banco .card-footer .card-text {
+  margin-bottom: 8px;
+  color: #606060;
+}
+.card-group-banco .card-banco .card-footer .card-btn {
+  color: #FFFFFF;
+}
+.card-group-banco .card-banco:hover {
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 3px 0;
+}
+.card-group-banco .card-banco:hover .card-btn {
+  color: #000000 !important;
+  background-color: #f7be16 !important;
+  border-color: #f7be16 !important;
+}
+.card-group-banco .card-banco:hover .card-title, .card-group-banco .card-banco:hover .card-text {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=card-group-banco.css.map */

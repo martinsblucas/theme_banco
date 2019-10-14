@@ -1,0 +1,47 @@
+@import "../../colors";
+@import "../../mixins";
+@import "../layout";
+
+.list-group-footer-banco {
+  padding: 10px 0;
+  .list-group-item {
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+    padding: 10px 0;
+    a {
+      color: $colorSecondary;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .dropdown-menu-banco {
+      padding: 10px 0;
+      .list-group-item {
+        font-size: 16px;
+        padding: 5px 0 0 10px;
+        &::before {
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+          color: $color4;
+          display: inline-block;
+          margin: 0 10px 0 0;
+          @include rotate(90deg);
+        }
+      }
+    }
+  }
+&.list-group-footer-primary-banco {
+  .list-group-item {
+    padding: 5px 0 0 10px;
+    &::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: $color4;
+      display: inline-block;
+      margin: 0 10px 0 0;
+      @include rotate(90deg);
+    }
+  }
+}
+}

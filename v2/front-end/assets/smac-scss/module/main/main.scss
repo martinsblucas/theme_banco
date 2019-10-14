@@ -1,0 +1,16 @@
+@import "../layout";
+@import "../../colors";
+#main {
+  padding: 0;
+  & .container {
+    padding: 0;
+    margin: 60px auto 20px;
+  }
+  h3 {
+    margin-bottom: 30px;
+  }
+  section {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
