@@ -1,0 +1,121 @@
+@import "../../_colors.scss";
+@import "../layout.scss";
+.btn-banco {
+  border-radius: $border_radius;
+  font-size: 13px;
+  text-transform: uppercase;
+  &:not(:disabled):not(.disabled):active,
+  &.focus,
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
+  &.nav-link {
+    border-radius: 0;
+    border: none;
+  }
+  &.btn-banco-primary {
+    color: inherit;
+    background-color: $colorPrimary!important;
+    border-color: $colorPrimary!important;
+    &:not(:disabled):not(.disabled):active,
+    &.focus,
+    &:hover,
+    &:focus {
+      color: inherit;
+      background-color: $colorPrimary!important;
+      border-color: $colorPrimary!important;
+    }
+  }
+  &.btn-banco-outline-primary {
+    color: inherit;
+    background-color: transparent!important;
+    border-color: $colorPrimary!important;
+    &:not(:disabled):not(.disabled):active,
+    &.focus,
+    &:hover,
+    &:focus {
+      color: inherit;
+      background-color: $colorPrimary!important;
+      border-color: $colorPrimary!important;
+    }
+  }
+  &.btn-banco-secondary {
+    color: inherit;
+    background-color: $colorSecondary!important;
+    border-color: $colorSecondary!important;
+    &:not(:disabled):not(.disabled):active,
+    &.focus,
+    &:hover,
+    &:focus {
+      color: inherit;
+      background-color: $colorSecondary!important;
+      border-color: $colorSecondary!important;
+    }
+  }
+  &.btn-banco-outline-secondary {
+    color: inherit;
+    background-color: transparent!important;
+    border-color: $colorSecondary!important;
+    &:not(:disabled):not(.disabled):active,
+    &.focus,
+    &:hover,
+    &:focus {
+      color: inherit;
+      background-color: $colorSecondary!important;
+      border-color: $colorSecondary!important;
+    }
+  }
+  &.btn-banco-tertiary {
+    color: inherit;
+    background-color: $colorTertiary!important;
+    border-color: $colorTertiary!important;
+    &:not(:disabled):not(.disabled):active,
+    &.focus,
+    &:hover,
+    &:focus {
+      color: inherit;
+      background-color: $colorTertiary!important;
+      border-color: $colorTertiary!important;
+    }
+  }
+  &.btn-banco-outline-tertiary {
+    color: inherit;
+    background-color: transparent!important;
+    border-color: $colorTertiary!important;
+    &:not(:disabled):not(.disabled):active,
+    &.focus,
+    &:hover,
+    &:focus {
+      color: inherit;
+      background-color: $colorTertiary!important;
+      border-color: $colorTertiary!important;
+    }
+  }
+  &.btn-banco-4 {
+    color: #000000;
+    background-color: $color4!important;
+    border-color: $color4!important;
+    &:not(:disabled):not(.disabled):active,
+    &.focus,
+    &:hover,
+    &:focus {
+      color: inherit;
+      background-color: $color4!important;
+      border-color: $color4!important;
+    }
+  }
+  &.btn-banco-outline-4 {
+    color: $color4;
+    background-color: transparent!important;
+    border-color: $color4!important;
+    &:not(:disabled):not(.disabled):active,
+    &.focus,
+    &:hover,
+    &:focus {
+      color: #000000;
+      background-color: $color4!important;
+      border-color: $color4!important;
+    }
+  }
+}
