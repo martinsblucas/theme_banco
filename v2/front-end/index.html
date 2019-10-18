@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="assets/smacss/module/layout.css">
     <link rel="stylesheet" href="assets/smacss/module/btn-banco/btn-banco.css">
     <link rel="stylesheet" href="assets/smacss/base.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,400i,500,500i,600,600i&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab&display=swap" rel="stylesheet">
     <link href="assets/font/font-awesome/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/smacss/icons.css" type="text/css">
     <!--[if lt IE 9]>
@@ -22,7 +24,7 @@
 <link rel="stylesheet" href="assets/smacss/module/header/navbar-banco.css" type="text/css">
 <header id="header" class="container-fluid">
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-banco">
+        <nav class="navbar navbar-expand-md navbar-banco">
             <div class="navbar navbar-header">
                 <div class="navbar-brand">
                     <a href="index.html">
@@ -30,55 +32,82 @@
                         <h2>Semana de Cinema</h2>
                     </a>
                 </div>
-                <button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#Menu">
+                <button class="navbar-toggler collapsed menu-primary" data-toggle="collapse" data-target="#MenuPrimary">
                     <span class="navbar-toggler-icon d-flex align-items-center justify-content-center">
                         <span></span>
                     </span>
                 </button>
             </div>
             <div class="navbar-body">
-                <div class="collapse navbar-collapse menu" id="Menu">
-                    <div class="menu-primary" id="MenuPrimary">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a href="" class="nav-link inicio d-block d-md-none">Início</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link envie-seu-filme">Envie seu filme</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link seja-um-exibidor">Seja um exibidor</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link exibidores-parceiros">Exibidores parceiros</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link contato">Contato</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="" class="nav-link dropdown-toggle ed-anteriores"
-                                   data-toggle="dropdown">Semana</a>
-                                <div class="dropdown-menu">
-                                    <a href="" class="dropdown-item">2018</a>
-                                    <a href="" class="dropdown-item ">2017</a>
-                                    <a href="" class="dropdown-item disabled">...</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="d-flex menu-administrador" id="MenuAdministrador">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a href="" class="nav-link filmes">Filmes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link admin">Administrar</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link perfil">Perfil</a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="collapse navbar-collapse" id="MenuPrimary">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="" class="nav-link inicio">Início</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="" class="nav-link dropdown-toggle regulamento"
+                               data-toggle="dropdown">Regulamento</a>
+                            <div class="dropdown-menu">
+                                <a href="" class="dropdown-item">Realizador_s</a>
+                                <a href="" class="dropdown-item">Exibidor_s</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="" class="nav-link dropdown-toggle envie-filme"
+                               data-toggle="dropdown">Envie seu filme</a>
+
+                            <div class="dropdown-menu">
+                                <a href="" class="dropdown-item">Curtas e Médias</a>
+                                <a href="" class="dropdown-item">Longas</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link contato">Contato</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="" class="nav-link dropdown-toggle ed-anteriores"
+                               data-toggle="dropdown">Semana</a>
+                            <div class="dropdown-menu">
+                                <a href="" class="dropdown-item">2018</a>
+                                <a href="" class="dropdown-item ">2017</a>
+                                <a href="" class="dropdown-item disabled">...</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="login nav-link btn btn-banco btn-banco-secondary">
+                                Login
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://www.facebook.com/semanafestival/" target="_blank"
+                               class="facebook nav-link">
+                                <span class="d-inline d-md-none">
+                                    Facebook
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://www.instagram.com/semanafestival/" target="_blank"
+                               class="instagram nav-link">
+                                <span class="d-inline d-md-none">
+                                    Instagram
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex menu-administrador" id="MenuAdministrador">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="" class="nav-link filmes">Filmes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link admin">Administrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link perfil">Perfil</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -109,7 +138,7 @@
                                         consequat vel ante.
                                     </div>
                                     <div class="card-btn btn btn-banco btn-banco-primary">
-                                        Buscar
+                                        Filtrar
                                     </div>
                                 </div>
                             </a>
@@ -129,7 +158,7 @@
                                         sit amet sodales nunc urna vel felis.
                                     </div>
                                     <div class="card-btn btn btn-banco btn-banco-primary">
-                                        Buscar
+                                        Filtrar
                                     </div>
                                 </div>
                             </a>
@@ -148,7 +177,7 @@
                                         Nunc dolor dui, dictum non dignissim at, cursus ultricies erat ornare non.
                                     </div>
                                     <div class="card-btn btn btn-banco btn-banco-primary">
-                                        Buscar
+                                        Filtrar
                                     </div>
                                 </div>
                             </a>
@@ -167,7 +196,7 @@
                                         Nunc imperdiet tortor suscipit egestas congue.
                                     </div>
                                     <div class="card-btn btn btn-banco btn-banco-primary">
-                                        Buscar
+                                        Filtrar
                                     </div>
                                 </div>
                             </a>
@@ -186,7 +215,7 @@
                                         Nunc imperdiet tortor suscipit egestas congue.
                                     </div>
                                     <div class="card-btn btn btn-banco btn-banco-primary">
-                                        Buscar
+                                        Filtrar
                                     </div>
                                 </div>
                             </a>
@@ -205,7 +234,7 @@
                                         Mauris elit magna, faucibus non posuere id, hendrerit ut erat.
                                     </div>
                                     <div class="card-btn btn btn-banco btn-banco-primary">
-                                        Buscar
+                                        Filtrar
                                     </div>
                                 </div>
                             </a>
@@ -322,26 +351,20 @@
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <ul class="list-group list-group-footer-banco">
-                    <li class="list-group-item">Administração
-                        <ul class="list-group list-group-footer-banco dropdown-menu-banco">
-                            <li class="list-group-item"><a href="#">Usuários</a></li>
-                            <li class="list-group-item"><a href="#">Filmes</a></li>
-                        </ul>
-                    </li>
+                <li class="list-group-item">Administração
+                    <ul class="list-group list-group-footer-banco dropdown-menu-banco">
+                        <li class="list-group-item"><a href="#">Usuários</a></li>
+                        <li class="list-group-item"><a href="#">Filmes</a></li>
+                    </ul>
+                </li>
                 </ul>
             </div>
         </div>
     </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

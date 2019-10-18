@@ -1,0 +1,618 @@
+/**************************************
+1. Formatação geral
+**************************************/
+body {
+	background-color: #B28E27;
+	font-family: 'Sarabun',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
+}
+
+/**************************************
+2. Cabeçalho
+**************************************/
+header#header {
+	padding: 0;
+    box-shadow: 0 10px 50px rgba(0,0,0,.25);
+    border-bottom: 1px solid rgba(255,255,255,.3);
+}
+a, a:link, a:active, a:visited, a:hover {
+	text-decoration: none;
+}
+a, a:link, a:active, a:visited {
+	color: #FFFFFF;
+	opacity: .9;
+	transition: all .2s;
+}
+a:hover {
+	color: #FFFFFF;
+	opacity: 1;
+}
+
+/*******************
+2.1. Logo
+*******************/
+
+.navbar-brand h1 {
+	margin-bottom: 0;
+	line-height: 1em;
+}
+.navbar-semana .navbar-brand, .navbar-semana .navbar-brand a {
+	font-weight: 800;
+	color: rgb(255,255,255);
+	font-family: 'Alegreya Sans SC', sans-serif;
+	text-transform: uppercase;
+}
+
+/*******************
+2.2. Menu
+*******************/
+.bg-semana {
+	background-color: #000099!important;
+}
+.navbar-semana .navbar-nav .nav-link {
+    color: rgb(255,255,255);
+    padding: 0 1rem;
+    text-transform: uppercase;
+    background-color: #000099;
+}
+.navbar-semana .navbar-nav .nav-link:focus,
+.navbar-semana .navbar-nav .nav-link:hover {
+    color: rgb(255,255,255);
+}
+.navbar-semana .dropdown-menu {
+	background: #000000;
+	font-size: .8em;
+	padding: 0;
+}
+.navbar-semana .dropdown-item {
+	padding: .30rem 1rem;
+    color: rgb(255,255,255);
+    background-color: transparent;
+    border-top: .01rem solid rgb(255,255,255);
+}
+.navbar-semana .dropdown-item:focus,
+.navbar-semana .dropdown-item:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+    color: rgb(255,255,255);
+}
+.navbar-semana .dropdown-item.active,
+.navbar-semana .dropdown-item:active {
+    color: rgb(255,255,255);
+    text-decoration: none;
+    background-color: transparent;
+}
+.navbar-semana .navbar-nav .nav-link.disabled,
+.navbar-semana .navbar-nav .nav-link.disabled:hover,
+.navbar-semana .dropdown-item.disabled,
+.navbar-semana .dropdown-item:disabled,
+.navbar-semana .dropdown-item.disabled:hover {
+    color: rgba(255,255,255,.5);
+    background: transparent;
+    cursor: default;
+}
+.navbar-semana .navbar-toggler {
+    color: rgba(255,255,255,.9);
+    border: .1rem solid rgba(255,255,255,.9);
+    border-radius: .2rem;
+    font-size: 1.5em;
+    padding: 0rem .10rem;
+}
+.navbar-semana .navbar-toggler .navbar-toggler-icon span::before {
+	font-family: 'Font Awesome 5 Free';
+	content: "\f00d";
+	font-weight: 900;
+}
+.navbar-semana .navbar-toggler.collapsed .navbar-toggler-icon span::before {
+	content: "\f0c9";
+}
+.navbar-semana .navbar-toggler:hover,
+.navbar-toggler:active,.navbar-toggler:focus {
+	color: rgb(255,255,255);
+	border: .1rem solid rgba(255,255,255,1);
+	background: rgba(255,255,255,.3);
+}
+.navbar-semana .navbar-nav .nav-link::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: .3rem;
+    color: rgba(23,200,229,.9);
+}
+.navbar-semana .navbar-nav .inicio::before {
+	content: "\f015";
+}
+.navbar-semana .navbar-nav .regulamento::before {
+	content: "\f15c";
+}
+.navbar-semana .navbar-nav .envie-filme::before {
+	content: "\f008";
+}
+.navbar-semana .navbar-nav .contato::before {
+	content: "\f075";
+}
+.navbar-semana .navbar-nav .ed-anteriores::before {
+	content: "\f4ba";
+}
+.navbar-semana .navbar-nav .entrar::before {
+	content: "\f2f6";
+	color: #FFFFFF;
+}
+.navbar-semana .navbar-nav .sair::before {
+	content: "\f2f5";
+	color: #FFFFFF;
+}
+.navbar-semana .navbar-nav .btn-danger {
+	background-color: #c82333;
+}
+.navbar-semana .navbar-nav .btn-info {
+	background-color: #117a8b;
+}
+.btn {
+	letter-spacing: 0.03em;
+}
+.btn-semana, .navbar-semana .navbar-nav .nav-link.btn-semana {
+    color: rgba(255,255,255,.9);
+    background-color: rgba(23,200,229,.9);
+    border-color: rgba(23,200,229,.2);
+    font-weight: 700;
+}
+.btn-semana:not(:disabled):not(.disabled).active:focus,
+.btn--semana:not(:disabled):not(.disabled):active:focus,
+.show>.btn-semana.dropdown-toggle:focus {
+    box-shadow: 0 0 0.1 0.1rem rgba(0,0,0,0.5);
+}
+.btn-semana:not(:disabled):not(.disabled).active,
+.btn-semana:not(:disabled):not(.disabled):active,
+.show>.btn-semana.dropdown-toggle {
+    color: #fff;
+    background-color: #17C8E5;
+    border-color: rgba(23,200,229,.2);
+}
+.btn-semana.focus,
+.btn-semana:focus {
+    box-shadow: 0 0 0.1 0.1rem rgba(0,0,0,1);
+}
+.btn-semana:hover,
+.navbar-semana .navbar-nav .nav-link.btn-semana:hover {
+    color: #FFFFFF;
+    background-color: rgba(23,200,229,1);
+    border-color: rgba(23,200,229,.6);
+}
+
+/**************************************
+3. Main
+**************************************/
+main .titulo {
+	color: #FFFFFF;
+	line-height: 1.2;
+	font-weight: 300;
+	margin-bottom: 0;
+}
+main .linha {
+	border-top: 1px solid rgba(255,255,255,.5);
+}
+.count {
+	font-size: 16px;
+	font-weight: 500;
+	margin: 0 8px;
+	line-height: 18px;
+}
+article img {
+	transition-duration: .2s;
+	transition-property: all;
+}
+
+/*******************
+3.1. Nav2
+*******************/
+#nav2 {
+	text-transform: uppercase;
+	padding: .2rem 0;
+}
+#nav2 .navbar-nav {
+	border-right: 1px solid rgba(255,255,255,.3);
+}
+#nav2 .navbar-nav .nav-link {
+	font-size: 1em;
+	padding: .3rem 1rem;
+	color: #FFFFFF;
+	border-left: 1px solid rgba(255,255,255,.3);
+	text-decoration: none;
+	font-weight: 300;
+}
+#nav2 .navbar-nav .nav-link::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: .3rem;
+}
+#nav2 .navbar-nav .user {
+	text-transform: none;
+}
+#nav2 .navbar-nav .adm::before {
+	content: "\f085";
+}
+#nav2 .navbar-nav .filmes::before {
+	content: "\f03d";
+}
+#nav2 .navbar-nav .user::before {
+	content: "\f007";
+}
+
+/*******************
+3.2. Nav3
+*******************/
+.tabs-semana {
+	overflow-x: auto;
+	overflow-y: hidden;
+	border-bottom: 0.2rem solid rgba(76,63,0,0.3);
+}
+.tabs-semana li a {
+	white-space: nowrap;
+	text-decoration: none;
+	font-weight: 300;
+}
+.tabs-semana .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+.tabs-semana .nav-item.show .nav-link, .tabs-semana .nav-link.active {
+    color: #FFFFFF;
+    background-color: rgba(76,63,0,.2);
+    border-color: rgba(76,63,0,0.3);
+}
+.tabs-semana .nav-link:focus, .tabs-semana .nav-link:hover {
+    border-color: rgba(76,63,0,0.3);
+    background-color: rgba(76,63,0,.2);
+}
+.tabs-semana .divisor {
+	width: 1px;
+	cursor: default;
+	background-color: #DDD;
+}
+
+/*******************
+3.3. Jumbotron
+*******************/
+.jumbotron {
+	background: rgba(76,63,0,.2);
+	color: #FFFFFF;
+    border: .1rem solid rgba(76,63,0,0.3);
+}
+.jumbotron .lead {
+	color: rgba(227,229,223,1);
+}
+.jumbotron hr {
+	border-top: 1px solid rgba(255,255,255,.2);
+}
+.jumbotron p {
+	text-align: justify;
+}
+
+/*******************
+3.4. Caixa de pesquisa
+*******************/
+#pesquisa .form-control {
+    height: 3rem;
+}
+
+/*******************
+3.5. Cards (listagem de filmes)
+*******************/
+.card-semana, .card-semana .list-group li {
+    color: #FFFFFF;
+    background-color: rgba(76,63,0,.2);
+    border-color: rgba(76,63,0,0.3);
+}
+.card-semana p {
+	text-align: justify;
+}
+.categorias .list-group-item::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: .3rem;
+    background-color: rgba(17,122,139,.9);
+    padding: .2rem .3rem; 
+    content: "\f292";
+}
+
+/*******************
+3.5. Table (listagem de filmes)
+*******************/
+#filmes-tabela table {
+	color: #FFFFFF;
+}
+#filmes-tabela .thumb {
+	width: 100px;
+}
+#filmes-tabela .titulo-filme {
+	font-size: 1.5em;
+}
+.table-bordered td, .table-bordered th {
+    border: 1px solid rgba(76,63,0,0.3);
+}
+#filmes-tabela tr {
+	transition: all .3s;
+	border: .1rem solid rgba(76,63,0,0.3);
+}
+#filmes-tabela tr:hover {
+	background: rgba(76,63,0,.2);
+}
+#filmes-tabela thead th {
+	border-bottom: 1px solid #FFF;
+}
+
+/*******************
+3.6. Lista (listagem de filmes)
+*******************/
+#filmes-lista {
+	color: #FFF;
+}
+#filmes-lista .filmes-lista li {
+	border: 1px solid rgba(76,63,0,0.3);
+	background: rgba(76,63,0,.2);
+	border-radius: .25rem;
+	margin: .5em .5%;
+}
+#filmes-lista .media-body {
+	padding: 10px 8px;
+}
+#filmes-lista .filmes-lista li p {
+	text-align: justify;
+}
+.view {
+	font-size: 24px;
+	min-width: 74px;
+}
+.view i {
+	padding: 3px 5px;
+}
+.view a {
+	background: rgba(255,255,255, .5);
+	color: #000000;
+}
+.view a:hover, .view .active {
+	background: rgba(255,255,255, 1);
+}
+
+/*******************
+3.7. Paginação
+*******************/
+.pagination .page-link {
+    color: #17a2b8;
+}
+.pagination .active .page-link, .pagination .page-item .page-link:hover {
+    background-color: #17a2b8;
+    color: #FFFFFF;
+}
+
+/*******************
+3.8. Botão retornar ao topo
+*******************/
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    display: none;
+    transition: none!important;
+    box-shadow: 0 10px 50px rgba(0,0,0,.25);
+}
+
+
+
+/**************************************
+0. Media queries
+**************************************/
+
+@media (max-width: 360px) {
+	#nav2 .navbar-nav .nav-link {
+		font-size: .9em;
+	    padding: .3rem .4rem;
+	    text-align: center;
+	}
+	#nav2 .navbar-nav .user {
+		font-size: .6em;
+		height: 100%;
+		padding: .3rem .4rem;
+	}
+	#nav2 .navbar-nav .nav-link::before {
+	    margin-right: .2em;
+	}
+	.navbar-semana .navbar-nav .nav-link {
+	    border-top: 0.01rem solid;
+	    padding: .35rem 1rem;
+	}
+	#filmes-lista .thumb {
+		width: 30%;
+		border-top-left-radius: .25rem;
+	}
+	#filmes-lista .filmes-lista li {
+		width: 100%;
+	}
+	.titulo-filmes {
+		max-width: 100%;
+	}
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (min-width: 361px) and (max-width: 575.98px) {
+	.navbar-semana .navbar-nav {
+	    border: .1rem solid rgba(255,255,255,.9);
+	    border-radius: .2rem;
+	    padding: 1rem 0;
+	    background-color: rgba(255,255,255,.2);
+	}
+	.navbar-semana .navbar-nav .nav-link.btn-semana {
+		border-radius: 0;
+	}
+	#nav2 .navbar-nav .nav-link {
+		font-size: .9em;
+	    padding: .3rem .5rem;
+	    text-align: center;
+	    height: 100%;
+	}
+	#nav2 .navbar-nav .user {
+		font-size: .8em;
+		height: 100%;
+		padding: .3rem .5rem;
+	}
+	.navbar-semana .navbar-nav .nav-link {
+	    border-top: 0.01rem solid;
+	    padding: .35rem 1rem;
+	}
+	#capa .thumb {
+		width: 90%;
+	}
+	main .titulo {
+	    font-size: 2rem;
+	    font-weight: 500;
+	}
+	#filmes-lista .thumb {
+		width: 20%;
+		border-top-left-radius: .25rem;
+	}
+	#filmes-lista .filmes-lista li {
+		width: 100%;
+	}
+	.titulo-filmes {
+		max-width: 58%;
+	}
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.navbar-semana .navbar-nav {
+	    border: .1rem solid rgba(255,255,255,.9);
+	    border-radius: .2rem;
+	    padding: 1rem 0;
+	    background-color: rgba(255,255,255,.2);
+	}
+	.navbar-semana .navbar-nav .nav-link {
+	    border-top: .01rem solid;
+	    padding: .35rem 1rem;
+	}
+	.navbar-semana .navbar-nav .nav-link.btn-semana {
+		border-radius: 0;
+	}
+	#capa .thumb {
+		width: 75%;
+	}
+	main .titulo {
+	    font-size: 2.5rem;
+	}
+	#cards-filmes {
+	    -webkit-column-count: 2;
+	    -moz-column-count: 2;
+	    column-count: 2;
+	}
+	#filmes-lista .thumb {
+		width: 42%;
+		border-top-left-radius: .25rem;
+		border-bottom-left-radius: .25rem;
+	}
+	#filmes-lista .filmes-lista li {
+		width: 100%;
+	}
+	.titulo-filmes {
+		max-width: 70%;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.navbar-semana .navbar-nav {
+	    border: .1rem solid rgba(255,255,255,.9);
+	    border-radius: .2rem;
+	    padding: 1rem 0;
+	    background-color: rgba(255,255,255,.2);
+	}
+	.navbar-semana .navbar-nav .nav-link {
+	    border-top: .01rem solid;
+	    padding: .35rem 1rem;
+	}
+	.navbar-semana .navbar-nav .nav-link.btn-semana {
+		border-radius: 0;
+	}
+	#capa .thumb {
+		width: 60%;
+	}
+	main .titulo {
+	    font-size: 3rem;
+	}
+	#cards-filmes {
+	    -webkit-column-count: 2;
+	    -moz-column-count: 2;
+	    column-count: 2;
+	}
+	#filmes-lista .thumb {
+		width: 30%;
+		border-top-left-radius: .25rem;
+		border-bottom-left-radius: .25rem;
+	}
+	#filmes-lista .filmes-lista li {
+		width: 100%;
+	}
+	.titulo-filmes {
+		max-width: 80%;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	.navbar-brand h1 {
+		font-size: 1.7em;
+	}
+	.navbar-semana .navbar-nav .nav-link {
+	    padding: .35rem .4rem;
+	}
+	.navbar-semana .dropdown-menu {
+		margin-left: 1em;
+	}
+	main .titulo {
+	    font-size: 3.5rem;
+	}
+	#capa .thumb {
+		width: 50%;
+	}
+	main .titulo {
+	    font-size: 3.5rem;
+	}
+	#filmes-lista .thumb {
+		width: 45%;
+		border-top-left-radius: .25rem;
+	}
+	#filmes-lista .filmes-lista li {
+		width: 49%;
+	}
+	.titulo-filmes {
+		max-width: 80%;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+	.navbar-semana .navbar-nav .nav-link {
+	    padding: .35rem .6rem;
+	}
+	.navbar-semana .dropdown-menu {
+		margin-left: 1em;
+	}
+	main .titulo {
+	    font-size: 3.5rem;
+	}
+	#capa .thumb {
+		width: 50%;
+	}
+	#filmes-lista .thumb {
+		width: 42%;
+		border-top-left-radius: .25rem;
+		border-bottom-left-radius: .25rem;
+	}
+	#filmes-lista .filmes-lista li {
+		width: 49%;
+	}
+	.titulo-filmes {
+		max-width: 80%;
+	}
+}

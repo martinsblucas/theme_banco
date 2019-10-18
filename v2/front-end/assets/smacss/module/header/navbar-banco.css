@@ -15,34 +15,95 @@
   }
 }
 .navbar-banco {
-  padding: 30px 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .navbar-banco {
+    flex-wrap: wrap;
+  }
 }
 .navbar-banco .navbar-header {
   padding: 0 15px;
   width: 100%;
-  margin-bottom: 20px;
+  background: url("../../../img/passaro.svg") 55% 0 no-repeat;
+  background-size: 150px auto;
 }
-@media (min-width: 992px) {
+@media (max-width: 1199.98px) {
   .navbar-banco .navbar-header {
-    margin-bottom: 0;
-    width: auto;
+    background-position: 85% -10px;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar-banco .navbar-header {
+    background-image: none;
   }
 }
 .navbar-banco .navbar-header .navbar-brand {
-  padding: 0;
-  text-transform: uppercase;
+  padding-top: 30px;
+}
+@media (min-width: 768px) {
+  .navbar-banco .navbar-header .navbar-brand {
+    padding-bottom: 30px;
+  }
+}
+.navbar-banco .navbar-header .navbar-brand h1, .navbar-banco .navbar-header .navbar-brand h2 {
+  font-weight: 400;
 }
 .navbar-banco .navbar-header .navbar-brand h1 {
-  font-size: 26px;
+  font-size: 50px;
   margin-bottom: 0;
   line-height: 1em;
   text-align: left;
   color: #293462;
 }
+@media (min-width: 461px) and (max-width: 767.98px) {
+  .navbar-banco .navbar-header .navbar-brand h1 {
+    font-size: 44px;
+  }
+}
+@media (max-width: 460px) {
+  .navbar-banco .navbar-header .navbar-brand h1 {
+    font-size: 34px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar-banco .navbar-header .navbar-brand h1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 359px) {
+  .navbar-banco .navbar-header .navbar-brand h1 {
+    font-size: 26px;
+  }
+}
 .navbar-banco .navbar-header .navbar-brand h2 {
   margin-bottom: 0;
-  color: #303030;
-  font-size: 23px;
+  color: #216583;
+  font-size: 34px;
+  text-align: left;
+}
+@media (min-width: 461px) and (max-width: 767.98px) {
+  .navbar-banco .navbar-header .navbar-brand h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 460px) {
+  .navbar-banco .navbar-header .navbar-brand h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar-banco .navbar-header .navbar-brand h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 359px) {
+  .navbar-banco .navbar-header .navbar-brand h2 {
+    font-size: 20px;
+  }
+}
+.navbar-banco .navbar-header .navbar-brand a {
+  font-weight: 800;
 }
 .navbar-banco .navbar-header .navbar-toggler {
   color: rgba(0, 0, 0, 0.9);
@@ -68,17 +129,21 @@
   border: none;
 }
 .navbar-banco .navbar-body {
-  padding: 0;
+  padding: 0 0 30px;
   display: flex;
   width: 100%;
   flex-wrap: wrap;
 }
+@media (min-width: 768px) {
+  .navbar-banco .navbar-body {
+    padding: 0 0 40px;
+  }
+}
 .navbar-banco .navbar-body .navbar-nav {
   width: 100%;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-banco .navbar-body .navbar-nav {
-    width: auto;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
@@ -86,16 +151,21 @@
 }
 .navbar-banco .navbar-body .navbar-nav .nav-link {
   text-align: left;
-  color: #303030;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 4px 15px;
+  color: #216583;
+  font-size: 18px;
+  padding: 10px 20px;
   margin: 0;
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
   .navbar-banco .navbar-body .navbar-nav .nav-link {
-    padding: 2px 10px;
+    padding: 10px 26px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-banco .navbar-body .navbar-nav .nav-link {
+    border-radius: 5px;
+    background-color: #f7be16;
+    box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px 0;
   }
 }
 @media (max-width: 575.98px) {
@@ -104,22 +174,27 @@
   }
 }
 .navbar-banco .navbar-body .navbar-nav .nav-link:focus, .navbar-banco .navbar-body .navbar-nav .nav-link:hover {
-  color: #f7be16;
-  background-color: rgba(64, 64, 64, 0.05);
+  padding-left: 40px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-banco .navbar-body .navbar-nav .nav-link:focus, .navbar-banco .navbar-body .navbar-nav .nav-link:hover {
-    background-color: transparent;
+    padding: 12px 28px;
   }
 }
 .navbar-banco .navbar-body .navbar-nav .nav-link.dropdown-toggle::after {
-  color: #293462;
+  color: #00818a;
+}
+.navbar-banco .navbar-body .navbar-nav .nav-link::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 12px;
+  color: #216583;
 }
 .navbar-banco .navbar-body .navbar-nav .nav-link.facebook::before, .navbar-banco .navbar-body .navbar-nav .nav-link.instagram::before {
   font-family: "Font Awesome 5 Brands";
   font-weight: 400;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-banco .navbar-body .navbar-nav .nav-link.facebook::before, .navbar-banco .navbar-body .navbar-nav .nav-link.instagram::before {
     margin-right: 0;
   }
@@ -131,72 +206,91 @@
   color: #FFFFFF;
 }
 .navbar-banco .navbar-body .navbar-nav .dropdown-menu {
-  color: #303030;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
+  right: 0;
+  font-size: 18px;
   padding: 0 0;
   border: none;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  background-color: transparent;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-banco .navbar-body .navbar-nav .dropdown-menu {
-    width: 100%;
-    min-width: 100%;
     background-color: #FFFFFF;
-    box-shadow: rgba(0, 0, 0, 0.5) 0 0 3px 0;
+    box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px 0;
   }
 }
 .navbar-banco .navbar-body .navbar-nav .dropdown-item {
-  padding: 5px 10px;
-  color: #303030;
+  padding: 5px 70px;
+  color: #293462;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-banco .navbar-body .navbar-nav .dropdown-item {
-    border-bottom: 1px solid #404040;
+    text-align: center;
+    padding: 5px 50px;
+    border-bottom: 1px solid;
   }
 }
 .navbar-banco .navbar-body .navbar-nav .dropdown-item:focus, .navbar-banco .navbar-body .navbar-nav .dropdown-item:hover {
-  color: #303030;
+  color: #293462;
+  padding-left: 74px;
   text-decoration: none;
+  background-color: transparent;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-banco .navbar-body .navbar-nav .dropdown-item:focus, .navbar-banco .navbar-body .navbar-nav .dropdown-item:hover {
-    color: #303030;
+    color: #293462;
+    padding: 5px 50px;
   }
 }
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .navbar-banco .navbar-body .menu {
-    justify-content: flex-end;
-    flex-wrap: wrap;
+.navbar-banco .navbar-body .menu-primary {
+  background-color: transparent;
+}
+@media (max-width: 575.98px) {
+  .navbar-banco .navbar-body .menu-primary {
+    background: url(../../../img/passaro.svg) 90% 0 no-repeat;
+    background-size: 150px;
   }
+}
+.navbar-banco .navbar-body .menu-primary .navbar-nav .nav-link {
+  font-weight: 500;
 }
 .navbar-banco .navbar-body .menu-administrador {
   width: 100%;
   margin-top: 10px;
 }
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .navbar-banco .navbar-body .menu-administrador {
-    justify-content: flex-end;
-    margin-top: 0;
-  }
+.navbar-banco .navbar-body .menu-administrador .navbar-nav {
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 15px;
+  justify-content: start;
 }
-@media (min-width: 1200px) {
-  .navbar-banco .navbar-body .menu-administrador {
-    width: auto;
-    margin-top: 0;
-  }
-}
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-banco .navbar-body .menu-administrador .navbar-nav {
     padding: 0;
+    justify-content: flex-end;
   }
 }
 .navbar-banco .navbar-body .menu-administrador .navbar-nav .nav-link {
-  color: #293462;
+  box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px 0;
+  border-radius: 5px;
+  background-color: #293462;
+  font-size: 16px;
+  padding: 5px 10px;
+  color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .navbar-banco .navbar-body .menu-administrador .navbar-nav .nav-link {
+    font-size: 18px;
+  }
+}
+.navbar-banco .navbar-body .menu-administrador .navbar-nav .nav-link::before {
+  color: #f7be16;
+  margin-right: 5px;
+  text-decoration: none;
 }
 .navbar-banco .navbar-body .menu-administrador .navbar-nav .nav-link:hover {
-  color: #f7be16;
+  padding: 7px 12px;
 }
 
 /*# sourceMappingURL=navbar-banco.css.map */

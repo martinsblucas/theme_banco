@@ -1,9 +1,5 @@
 @import "../../_colors.scss";
-@import "../layout.scss";
 .btn-banco {
-  border-radius: $border_radius;
-  font-size: 13px;
-  text-transform: uppercase;
   &:not(:disabled):not(.disabled):active,
   &.focus,
   &:hover,
