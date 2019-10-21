@@ -17,9 +17,9 @@ class PostTypes {
 register_activation_hook( __FILE__, array( 'PostTypes', 'install' ) );
 register_deactivation_hook( __FILE__, array( 'PostTypes', 'deactivation' ) );
 register_uninstall_hook( __FILE__, array( 'PostTypes', 'uninstall' ) );
+require_once (__DIR__ . '/actions/init.php');
 require_once (__DIR__ . '/class/classMeta.php');
-require_once (__DIR__ . '/actions/types_init.php');
-require_once (__DIR__ . '/actions/register_metas.php');
-require_once (__DIR__ . '/actions/add_meta_boxes.php');
+require_once (__DIR__ . '/actions/register_meta.php');
+require_once (__DIR__ . '/actions/add_meta_box.php');
+require_once (__DIR__ . '/actions/save_post.php');
 require_once (__DIR__ . '/actions/add_admin_scripts.php');
-add_action( 'admin_enqueue_scripts', 'add_admin_scripts', 10, 1 );

@@ -2,18 +2,18 @@
 
 class Meta
 {
-    static function get_post_meta($post, $slug, $label, $type = 'string')
+    static function get_meta_form($post, $slug, $label, $type = 'string', $options = null)
     {
-        if ($type === 'string') {
-            $values = get_post_meta($post->ID, $slug, true); ?>
-            <div class="form-group <?= $slug ?>">
+        $values = get_post_meta($post->ID, $slug, true);
+        if (!$values) {
+            $values = [''];
+        }
+        if ($type === 'string') { ?>
+            <div class="form-group <?= $type; ?> <?= $slug; ?>">
                 <label for="<?= $slug ?>">
                     <?php _e($label, 'post-types'); ?>
                 </label>
                 <?php
-                if (!$values) {
-                    $values = [''];
-                }
                 foreach ($values as $key => $value) {
                     $total = count($values);
                     $total - $key === 1 ? $id = "id = '" . $slug . "'" : $id = null;
@@ -35,39 +35,88 @@ class Meta
                 </span>
             </div>
         <?php } elseif
-        ($type == 'image') { ?>
-            <div class="form-group">
-                <?php
-                $values = get_post_meta($post->ID, $slug, true);
-                if ($values) {
-                    foreach ($values as $key => $value) {
-                        $image = wp_get_attachment_image($value, 'medium', false, array('id' => 'post-types-preview-image'));
-                        echo $image;
-                        ?>
-                        <input type="hidden" name="foto-diretor[]" id="post-types_image_id"
-                               value="<?php echo esc_attr($value); ?>" class="regular-text"/>
-                        <input type='button' class="button-primary"
-                               value="<?php esc_attr_e($label, 'post-types'); ?>"
-                               id="post-types_media_manager"/>
-                        <?php
-                    }
-                } else {
-                    $image = '<img id="post-types-preview-image" src="https://picsum.photos/seed/picsum/300/300" />';
-                    echo $image; ?>
-                    <input type="hidden" name="foto-diretor[]" id="post-types_image_id"
-                           value="" class="regular-text"/>
-                    <input type='button' class="button-primary"
-                           value="<?php esc_attr_e($label, 'post-types'); ?>"
-                           id="post-types_media_manager"/>
-                <?php } ?>
-
+        ($type == 'image') {
+            if (!$values) {
+                $values = [];
+            }
+            ?>
+            <div class="form-group <?= $type; ?> <?= $slug; ?>">
+                <label><?php esc_attr_e($label, 'post-types'); ?></label>
+                <div class="input-group">
+                    <div class="row">
+                        <?php foreach ($values as $key => $value) {
+                            $image = wp_get_attachment_image($value, 'medium', false, array('class' => 'img-fluid')); ?>
+                            <div class="col-2">
+                                <?= $image; ?>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+                <?php $values = implode(",", $values) ?>
+                <input type="hidden" name="<?= $slug; ?>" id="<?= $slug; ?>"
+                       value="<?php echo esc_attr($values); ?>" class="imgIds"/>
+                <span class="btn btn-secondary btn-sm addImg">
+                    <span class="dashicons dashicons-plus"></span>
+                </span>
             </div>
-
+        <?php } elseif
+        ($type == 'internal_link') {
+            $posts = Meta::get_posts($options);
+            ?>
+            <div class="form-group <?= $type; ?> <?= $slug; ?>">
+                <label for="<?= $slug ?>">
+                    <?php _e($label, 'post-types'); ?>
+                </label>
+                <?php
+                foreach ($values as $key => $value) {
+                    $total = count($values);
+                    $total - $key === 1 ? $id = "id = '" . $slug . "'" : $id = null;
+                    ?>
+                    <div class="input-group">
+                        <select class="form-control" name="<?= $slug; ?>[]" <?= $id ?>>
+                            <option value="9999999">Oi</option>
+                            <?php foreach ($posts as $post) {
+                                $post->ID == $value ? $selected = 'selected' : $selected = null; ?>
+                                <option value="<?= esc_attr($post->ID) ?>" <?= $selected ?>><?= esc_attr($post->post_title) ?></option>
+                            <?php } ?>
+                        </select>
+                        <?php if ($key > 0) { ?>
+                            <div class="input-group-append">
+                            <span class="d-flex btn btn-sm btn-danger align-items-center removeField">
+                                <span class="dashicons dashicons-trash"></span>
+                            </span>
+                            </div>
+                        <?php } ?>
+                    </div>
+                <?php } ?>
+                <span class="btn btn-secondary btn-sm addField">
+                    <span class="dashicons dashicons-plus"></span>
+                </span>
+            </div>
             <?php
         }
     }
 
-    static function register_meta($name, $type)
+    static function get_posts($args = null)
+    {
+        $defaults = array(
+            'numberposts' => 9999,
+            'category' => 0,
+            'orderby' => 'name',
+            'order' => 'ASC',
+            'include' => array(),
+            'exclude' => array(),
+            'meta_key' => '',
+            'meta_value' => '',
+            'post_type' => 'post',
+            'suppress_filters' => true,
+        );
+        $p = wp_parse_args($args, $defaults);
+
+        return get_posts($p);
+    }
+
+    public function register_meta($name, $type)
     {
         $args = array(
             'object_subtype' => $name,
@@ -78,48 +127,64 @@ class Meta
         return register_meta('post', $name, $args);
     }
 
-    static function save_metas($slug, $type = 'text_field')
+    public function save_metas($slug, $type = 'text_field')
     {
-        $post_ID = $_POST['post_ID'];
-        $values = $_POST[$slug];
+        global $post;
+        $current_user = wp_get_current_user();
+        $author = $current_user->ID;
+        isset ($_POST['post_ID']) ? $post_ID = $_POST['post_ID'] : $post_ID = $post->ID;
+        isset ($_POST[$slug]) ? $values = $_POST[$slug] : $values = [];
+        if ($type === 'image' && $values) {
+            $values = explode(",", $values);
+        }
         if ($values) {
-            $data = array();
+            $errors = [];
             foreach ($values as $key => $value) {
+                $data = [];
                 switch ($type) {
+                    case 'internal_link' :
+                        $single = intval($value);
+                        $test = get_post($single);
+                        if (!$test) {
+                            $errors[$key][] = 'Erro ao gravar ' . $type . ' ' . $slug;
+                        }
+                        break;
+                    case 'image' :
+                        $single = intval($value);
+                        $test = wp_get_attachment_image($value, 'medium', false, array('class' => 'img-fluid'));
+                        if (!$test) {
+                            $single = null;
+                        }
+                        break;
                     default :
                         $single = sanitize_text_field($value);
                         break;
                 }
-                array_push($data, $single);
+                if ($single != null) {
+                    $data[] = $single;
+                }
+            }
+            if ($errors) {
+                set_transient('post-types-error-post-'.$post_ID.'-author-'.$author, $errors, 999999);
             }
             update_post_meta($post_ID, $slug, $data);
         }
     }
 
-    static function add_meta_box($name, $screens)
-    {
-        foreach ($screens as $screen) {
-            add_meta_box(
-                '',
-                __($name, 'post-types'),
-                'meta_box_inner',
-                $screen
-            );
-            function meta_box_inner($post)
-            {
-                ?>
-                <link rel="stylesheet"
-                      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-                      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-                      crossorigin="anonymous">';
-                <div id="fichaTecnica">
-                    <?php
-                    Meta::get_post_meta($post, 'direcao', 'Direção', 'string');
-                    Meta::get_post_meta($post, 'producao', 'Produção', 'string');
-                    Meta::get_post_meta($post, 'foto-diretor', 'Foto do diretor', 'image');
-                    ?>
-                </div>
-            <?php }
-        }
-    }
+    public function meta_box_inner($post)
+    { ?>
+        <link rel="stylesheet"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+              crossorigin="anonymous">
+        <div id="fichaTecnica">
+            <?php
+            $this->get_meta_form($post, 'direcao', 'Direção', 'internal_link', ['post_type' => 'diretores']);
+            $this->get_meta_form($post, 'producao', 'Produção', 'string');
+            $this->get_meta_form($post, 'foto_diretor', 'Foto do diretor', 'image');
+            $this->get_meta_form($post, 'foto_produtor', 'Foto do produtor', 'image');
+            ?>
+        </div>
+
+    <?php }
 }
