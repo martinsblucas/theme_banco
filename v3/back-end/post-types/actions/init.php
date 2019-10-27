@@ -31,7 +31,7 @@ function registerFimes()
         'has_archive' => true,
         'hierarchical' => true,
         'menu_position' => 4,
-        'menu_icon' => null,
+        'menu_icon' => 'dashicons-format-video',
         'supports' => array('editor', 'thumbnail', 'title', 'author', 'excerpt'),
         'show_in_rest' => true
     );
@@ -69,9 +69,10 @@ function registerDiretor()
         'has_archive' => true,
         'hierarchical' => true,
         'menu_position' => 5,
-        'menu_icon' => null,
+        'menu_icon' => 'dashicons-video-alt2',
         'supports' => array('editor', 'thumbnail', 'title', 'author', 'excerpt'),
         'show_in_rest' => true
     );
     register_post_type('diretores', $args);
 }
+$taxonomies = new Taxonomy;

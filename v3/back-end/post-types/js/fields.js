@@ -8,12 +8,14 @@ $(document).ready(r => {
         const clone = input_group.clone();
         let form_control = clone.find('.form-control');
         form_control.attr('id', id);
+        form_control.removeClass('is-invalid');
+        clone.find('.invalid-feedback').remove();
         let input_group_append;
         if (clone.find(".removeField").length === 0 && clone.find(".input-group-append").length === 1) {
-            input_group_append = '<span class="d-flex btn btn-sm btn-danger align-items-center removeField"><span class="dashicons dashicons-trash"></span></span>';
+            input_group_append = '<button type="button" class="d-flex btn btn-sm btn-outline-danger align-items-center removeField"><span class="dashicons dashicons-trash"></span></button>';
         }
         else if (clone.find(".removeField").length === 0 && clone.find(".input-group-append").length === 0) {
-            input_group_append = '<div class="input-group-append"><span class="d-flex btn btn-sm btn-danger align-items-center removeField"><span class="dashicons dashicons-trash"></span></span></div>';
+            input_group_append = '<div class="input-group-append"><button type="button" class="d-flex btn btn-sm btn-outline-danger align-items-center removeField"><span class="dashicons dashicons-trash"></span></button></div>';
         }
         clone.append(input_group_append);
         form_control.val('');

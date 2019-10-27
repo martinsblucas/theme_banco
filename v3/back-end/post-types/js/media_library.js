@@ -43,7 +43,7 @@ $(document).ready(r => {
 function Refresh_Image(the_id, event){
     let form_group = $(event.target).closest('.form-group');
     let row = form_group.find('.input-group .row');
-    let col = row.find('.col-2');
+    let col = row.find('.col-4');
     const data = {
         action: 'post_types_get_image',
         id: the_id
