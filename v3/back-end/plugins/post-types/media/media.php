@@ -1,6 +1,6 @@
 <?php
 function post_types_jpeg_quality() {
-    return 100;
+    return 80;
 }
 add_filter( 'jpeg_quality', 'post_types_jpeg_quality');
 if (function_exists('add_image_size')) {
