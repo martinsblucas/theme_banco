@@ -1,0 +1,10 @@
+.dropdown-menu-banco .list-group-item::before,
+.list-group-footer-primary-banco .list-group-item::before {
+    content: "\f3bf";
+}
+.dropdown-menu-banco .list-group-item.instagram a::before {
+    content: "\f16d";
+}
+.dropdown-menu-banco .list-group-item.facebook a::before {
+    content: "\f39e";
+}

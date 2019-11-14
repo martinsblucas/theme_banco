@@ -1,0 +1,105 @@
+@import "../../colors";
+@import "../../mixins";
+@import "../layout";
+
+.list-group-footer-banco {
+  padding: 10px 0;
+
+  .list-group-item {
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+    padding: 10px 0;
+
+    .h6,
+    a .h6 {
+      background-color: $colorSecondary;
+      color: $bodyBG;
+      padding: 4px 10px;
+      border-radius: $border_radius;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown-menu-banco {
+      padding: 10px 0;
+
+      .list-group-item {
+        font-size: 13px;
+        padding: 5px 0 0 10px;
+
+        &::before {
+          font-family: 'Font Awesome 5 Free';
+          font-size: 12px;
+          font-weight: 900;
+          color: $bodyBG;
+          display: inline-block;
+          margin: 0 15px 0 0;
+          @include rotate(90deg);
+        }
+
+        &.facebook,
+        &.instagram {
+          padding: 0;
+          margin-right: 4px;
+
+          &::before {
+            content: "";
+            margin: 0;
+          }
+
+          a {
+            &::before {
+              @include rotate(0);
+              font-family: "Font Awesome 5 Brands";
+              font-weight: 400;
+              font-size: 14px;
+              background-color: $colorSecondary;
+              color: $bodyBG;
+              padding: 10px 14px;
+              border-radius: $border_radius;
+              @media (min-width: 768px) {
+                margin-right: 0;
+              }
+            }
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.list-group-footer-primary-banco {
+    .list-group-item {
+      padding: 5px 0 0 10px;
+
+      &::before {
+        font-family: 'Font Awesome 5 Free';
+        font-size: 12px;
+        font-weight: 900;
+        color: $bodyBG;
+        display: inline-block;
+        margin: 0 15px 0 0;
+        @include rotate(90deg);
+      }
+    }
+  }
+
+  &.redes {
+    .h6,
+    a .h6 {
+      background-color: inherit;
+      color: inherit;
+      padding: inherit;
+      border-radius: inherit;
+    }
+  }
+
+  &.redes .dropdown-menu-banco {
+    flex-direction: row;
+  }
+}

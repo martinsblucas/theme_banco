@@ -1,0 +1,112 @@
+@media (min-width: 576px) and (max-width: 650px) {
+  .container {
+    max-width: 650px;
+  }
+}
+@media (min-width: 651px) and (max-width: 720px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 721px) and (max-width: 767.98px) {
+  .container {
+    max-width: 767.98px;
+  }
+}
+.list-group-footer-banco {
+  padding: 10px 0;
+}
+.list-group-footer-banco .list-group-item {
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  padding: 10px 0;
+}
+.list-group-footer-banco .list-group-item .h6,
+.list-group-footer-banco .list-group-item a .h6 {
+  background-color: #404040;
+  color: #ebebeb;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+.list-group-footer-banco .list-group-item a:hover {
+  text-decoration: underline;
+}
+.list-group-footer-banco .list-group-item .dropdown-menu-banco {
+  padding: 10px 0;
+}
+.list-group-footer-banco .list-group-item .dropdown-menu-banco .list-group-item {
+  font-size: 13px;
+  padding: 5px 0 0 10px;
+}
+.list-group-footer-banco .list-group-item .dropdown-menu-banco .list-group-item::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  font-weight: 900;
+  color: #ebebeb;
+  display: inline-block;
+  margin: 0 15px 0 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.list-group-footer-banco .list-group-item .dropdown-menu-banco .list-group-item.facebook, .list-group-footer-banco .list-group-item .dropdown-menu-banco .list-group-item.instagram {
+  padding: 0;
+  margin-right: 4px;
+}
+.list-group-footer-banco .list-group-item .dropdown-menu-banco .list-group-item.facebook::before, .list-group-footer-banco .list-group-item .dropdown-menu-banco .list-group-item.instagram::before {
+  content: "";
+  margin: 0;
+}
+.list-group-footer-banco .list-group-item .dropdown-menu-banco .list-group-item.facebook a::before, .list-group-footer-banco .list-group-item .dropdown-menu-banco .list-group-item.instagram a::before {
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+  transform: rotate(0);
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  font-size: 14px;
+  background-color: #404040;
+  color: #ebebeb;
+  padding: 10px 14px;
+  border-radius: 2px;
+}
+@media (min-width: 768px) {
+  .list-group-footer-banco .list-group-item .dropdown-menu-banco .list-group-item.facebook a::before, .list-group-footer-banco .list-group-item .dropdown-menu-banco .list-group-item.instagram a::before {
+    margin-right: 0;
+  }
+}
+.list-group-footer-banco .list-group-item .dropdown-menu-banco .list-group-item.facebook a:hover, .list-group-footer-banco .list-group-item .dropdown-menu-banco .list-group-item.instagram a:hover {
+  text-decoration: none;
+}
+.list-group-footer-banco.list-group-footer-primary-banco .list-group-item {
+  padding: 5px 0 0 10px;
+}
+.list-group-footer-banco.list-group-footer-primary-banco .list-group-item::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  font-weight: 900;
+  color: #ebebeb;
+  display: inline-block;
+  margin: 0 15px 0 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.list-group-footer-banco.redes .h6,
+.list-group-footer-banco.redes a .h6 {
+  background-color: inherit;
+  color: inherit;
+  padding: inherit;
+  border-radius: inherit;
+}
+.list-group-footer-banco.redes .dropdown-menu-banco {
+  flex-direction: row;
+}
+
+/*# sourceMappingURL=list-group-footer-banco.css.map */

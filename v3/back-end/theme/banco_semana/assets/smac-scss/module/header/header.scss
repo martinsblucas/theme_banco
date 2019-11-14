@@ -1,0 +1,9 @@
+@import "../../colors";
+#header {
+  padding: 0;
+  background-color: adjust_color(#FFFFFF, $alpha: -.15);
+  box-shadow: adjust_color(#000000, $alpha: -.5) 0 0 3px 0;
+  & .container {
+    padding: 0;
+  }
+}

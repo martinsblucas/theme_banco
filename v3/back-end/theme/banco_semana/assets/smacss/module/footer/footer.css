@@ -1,0 +1,13 @@
+#footer {
+  background-color: #303030;
+  color: #FFFFFF;
+  padding: 0;
+}
+#footer .container {
+  padding: 0 15px 60px;
+}
+#footer .container .row {
+  padding-top: 30px;
+}
+
+/*# sourceMappingURL=footer.css.map */

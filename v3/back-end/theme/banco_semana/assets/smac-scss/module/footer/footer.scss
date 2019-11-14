@@ -1,0 +1,12 @@
+@import "../../colors";
+#footer {
+  background-color: $colorPrimary;
+  color: #FFFFFF;
+  padding: 0;
+  & .container {
+    padding: 0 15px 60px;
+    .row {
+      padding-top: 30px;
+    }
+  }
+}
