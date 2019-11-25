@@ -1,3 +1,4 @@
+$ = jQuery;
 $(document).ready(r => {
     $(document).scroll(s => {
         const scrollPosition = $(document).scrollTop();

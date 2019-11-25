@@ -1,5 +1,7 @@
 <?php
+
 $meta = new Meta();
+
 $meta->register_meta('duracao', 'number');
 $meta->register_meta('ano', 'number');
 $meta->register_meta('formato', 'string');
@@ -39,3 +41,7 @@ $meta->register_meta('animador', 'string');
 $meta->register_meta('elenco', 'string');
 $meta->register_meta('principais-exibicoes', 'string');
 $meta->register_meta('sd-foley', 'string');
+
+$metaPost = new PostMeta;
+
+$metaPost->register_meta('url', 'url');

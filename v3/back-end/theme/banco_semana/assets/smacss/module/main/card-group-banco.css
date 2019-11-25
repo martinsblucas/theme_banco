@@ -35,6 +35,13 @@
     min-height: 180px;
   }
 }
+.card-group-banco .card-banco .card-footer .card-icon {
+  display: flex;
+  justify-content: center;
+  font-size: 120px;
+  color: #293462;
+  margin: 30px 0;
+}
 .card-group-banco .card-banco .card-footer .card-title {
   margin-bottom: 8px;
   text-transform: none;
@@ -63,6 +70,19 @@
 }
 .card-group-banco .card-banco:hover .card-title, .card-group-banco .card-banco:hover .card-text {
   text-decoration: underline;
+}
+
+.about-us .card-group-banco .card-banco {
+  text-align: center;
+}
+@media (min-width: 576px) {
+  .about-us .card-group-banco .card-banco .card-footer {
+    min-height: 370px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=card-group-banco.css.map */

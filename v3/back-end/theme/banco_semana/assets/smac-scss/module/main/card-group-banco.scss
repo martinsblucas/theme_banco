@@ -26,6 +26,14 @@
         min-height: 180px;
       }
 
+      .card-icon {
+        display: flex;
+        justify-content: center;
+        font-size: 120px;
+        color: $colorTertiary;
+        margin: 30px 0;
+      }
+
       .card-title {
         margin-bottom: 8px;
         text-transform: none;
@@ -63,6 +71,24 @@
     &:hover .card-title,
     &:hover .card-text {
       text-decoration: underline;
+    }
+  }
+}
+
+.about-us {
+  .card-group-banco {
+    .card-banco {
+      text-align: center;
+
+      .card-footer {
+        @media (min-width: 576px) {
+            min-height: 370px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+      }
     }
   }
 }

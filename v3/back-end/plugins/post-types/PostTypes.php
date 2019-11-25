@@ -18,6 +18,7 @@ register_activation_hook( __FILE__, array( 'PostTypes', 'install' ) );
 register_deactivation_hook( __FILE__, array( 'PostTypes', 'deactivation' ) );
 register_uninstall_hook( __FILE__, array( 'PostTypes', 'uninstall' ) );
 require_once (__DIR__ . '/class/classMeta.php');
+require_once (__DIR__ . '/class/classPostMeta.php');
 require_once (__DIR__ . '/class/classTransient.php');
 require_once (__DIR__ . '/class/classTaxonomy.php');
 require_once (__DIR__ . '/actions/init.php');

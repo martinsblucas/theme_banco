@@ -44,4 +44,7 @@ function save_metas($post_id)
     $meta->save_metas('elenco');
     $meta->save_metas('principais-exibicoes');
     $meta->save_metas('sd-foley');
+
+    $metaPost = new PostMeta();
+    $metaPost->save_metas('url');
 }

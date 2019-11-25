@@ -1,12 +1,11 @@
 <?php
 
 
-namespace Models;
+namespace App\Controllers;
 
 
-class Styles
+class StylesEnqueueController
 {
-
     public function __construct()
     {
         add_action('wp_enqueue_scripts', [$this, 'enqueue_styles']);
@@ -31,7 +30,7 @@ class Styles
         wp_register_style( 'navbar-banco', get_template_directory_uri() . '/assets/smacss/module/header/navbar-banco.css',false,'1','all' );
         wp_register_style( 'main', get_template_directory_uri() . '/assets/smacss/module/main/main.css',false,'1','all' );
         wp_register_style( 'card-group-banco', get_template_directory_uri() . '/assets/smacss/module/main/card-group-banco.css',false,'1','all' );
-        //wp_register_style( 'jumbotron-banco', get_template_directory_uri() . '/assets/smacss/module/main/jumbotron-banco.css',false,'1','all' );
+        wp_register_style( 'jumbotron-banco', get_template_directory_uri() . '/assets/smacss/module/main/jumbotron-banco.css',false,'1','all' );
         wp_register_style( 'footer', get_template_directory_uri() . '/assets/smacss/module/footer/footer.css',false,'1','all' );
         wp_register_style( 'list-group-footer-banco', get_template_directory_uri() . '/assets/smacss/module/footer/list-group-footer-banco.css',false,'1','all' );
     }
@@ -46,15 +45,15 @@ class Styles
         wp_enqueue_style('base');
         wp_enqueue_style('font-poppins');
         wp_enqueue_style('all');
+        wp_enqueue_style('icons');
         wp_enqueue_style('shiv');
         wp_enqueue_style('respond');
         wp_enqueue_style('header');
         wp_enqueue_style('navbar-banco');
         wp_enqueue_style('main');
         wp_enqueue_style('card-group-banco');
-        //wp_enqueue_style('jumbotron-banco');
+        wp_enqueue_style('jumbotron-banco');
         wp_enqueue_style('footer');
         wp_enqueue_style('list-group-footer-banco');
     }
-
 }
