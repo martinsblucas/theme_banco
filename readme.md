@@ -1,1 +1,3 @@
-#Tema do Banco de Obras da Semana de Cinema
+# Semana 2018
+
+Estudos de front-end e de implementação do tema
